@@ -1,0 +1,9 @@
+Arraylist:
+
+Arraylist is een collectie / verzameling van objecten ( geen primitieve datatypes )
+- add
+- get
+- remove
+- clear
+- contains
+- size

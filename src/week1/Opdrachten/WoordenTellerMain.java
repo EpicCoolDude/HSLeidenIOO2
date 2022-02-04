@@ -1,7 +1,13 @@
 package week1.Opdrachten;
 
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Locale;
+import java.util.stream.Collectors;
 
 public class WoordenTellerMain {
 
@@ -10,18 +16,38 @@ public class WoordenTellerMain {
         ArrayList<String> verbodenWoorden = new ArrayList<>();
         verbodenWoorden.addAll(Arrays.asList("the", "of", "to", "and", "are", "in", "is", "a"));
 
-        for (String woord : verbodenWoorden) {
-            System.out.println(woord);
-        }
 
-        ArrayList<String> woordenVanBestand = new ArrayList<>();
+        ArrayList<String> woordenVanBestand = woordenFileToArraylist("/home/tim/Documents/IOO2/iooa-opdrachten_2020-2021/week_1/IOOA_Word_Count_Bijlage_artikel.txt");
         ArrayList<String> woordenGefilterd = new ArrayList<>();
         ArrayList<String> woordenGesorteerd = new ArrayList<>();
+
+        // Array list printen om te testen
+        for (String woord : woordenVanBestand) {
+            System.out.println(woord);
+        }
 
 
     }
 
-    public ArrayList woordenFileToArrylist(String "padNaarFile"){
-        sout
+    public static ArrayList woordenFileToArraylist(String padNaarFile) {
+        try {
+            ArrayList ruweWoordenArrayList = (ArrayList) Files.readAllLines(Paths.get(padNaarFile))
+                    .stream()
+                    .map(l -> l.split(" "))
+                    .flatMap(Arrays::stream)
+                    .collect(Collectors.toList());
+
+            for (Object woord : ruweWoordenArrayList){ // Waarom moet ik nu Object doen ?
+                Object newValue = woord.toString().toLowerCase(Locale.ROOT); // Waarom maak ik er hier een String vna ?
+                //newValue = newValue.toString().replaceAll("^[a-z]","");
+                ruweWoordenArrayList.set(ruweWoordenArrayList.indexOf(woord), newValue);
+            }
+
+            return ruweWoordenArrayList;
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+        return (ArrayList) Collections.emptyList();
+
     }
 }

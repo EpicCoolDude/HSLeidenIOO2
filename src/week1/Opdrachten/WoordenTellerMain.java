@@ -29,21 +29,21 @@ public class WoordenTellerMain {
 
     }
 
-    public static ArrayList woordenFileToArraylist(String padNaarFile) {
+    public static ArrayList<String> woordenFileToArraylist(String padNaarFile) {
         try {
-            ArrayList ruweWoordenArrayList = (ArrayList) Files.readAllLines(Paths.get(padNaarFile))
+            ArrayList ruweWoordenArrayList = (ArrayList<String>) Files.readAllLines(Paths.get(padNaarFile))
                     .stream()
                     .map(l -> l.split(" "))
                     .flatMap(Arrays::stream)
                     .collect(Collectors.toList());
 
-            for (Object woord : ruweWoordenArrayList){ // Waarom moet ik nu Object doen ?
-                Object newValue = woord.toString().toLowerCase(Locale.ROOT); // Waarom maak ik er hier een String vna ?
-                //newValue = newValue.toString().replaceAll("^[a-z]","");
+            for (Object woord : ruweWoordenArrayList){
+                String newValue = woord.toString().toLowerCase(Locale.ROOT);
+                newValue = newValue.toString().replaceAll("[^a-z]","");
                 ruweWoordenArrayList.set(ruweWoordenArrayList.indexOf(woord), newValue);
             }
-
             return ruweWoordenArrayList;
+
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }

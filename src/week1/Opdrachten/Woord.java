@@ -2,10 +2,31 @@ package week1.Opdrachten;
 
 public class Woord {
 
-    public String woord;
-    public int teller = 1;
+    private String woord;
+    private int teller;
 
-    public void verhoogTeller(){
+    public Woord(String woord, int teller) {
+        this.woord = woord;
+        this.teller = teller;
+    }
+
+    public String getWoord() {
+        return woord;
+    }
+
+    public void setWoord(String woord) {
+        this.woord = woord;
+    }
+
+    public int getTeller() {
+        return teller;
+    }
+
+    public void setTeller(int teller) {
+        this.teller = teller;
+    }
+
+    public void verhoogTeller() {
         this.teller = teller + 1;
     }
 

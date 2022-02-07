@@ -15,13 +15,12 @@ public class WoordenTellerMain {
         verbodenWoorden.addAll(Arrays.asList("the", "of", "to", "and", "are", "in", "is", "a"));
 
 
-
         ArrayList<String> woordenVanBestand = woordenFileToArraylist("/home/tim/Documents/IOO2/iooa-opdrachten_2020-2021/week_1/IOOA_Word_Count_Bijlage_artikel.txt");
-        ArrayList<String> woordenGefilterd = new ArrayList<>();
+        ArrayList<String> woordenGefilterd = arrayListFilteren(woordenVanBestand);
         ArrayList<String> woordenGesorteerd = new ArrayList<>();
 
         // Array list printen om te testen
-        for (String woord : woordenVanBestand) {
+        for (String woord : woordenGefilterd) {
             System.out.println(woord);
         }
 
@@ -38,9 +37,9 @@ public class WoordenTellerMain {
                     .collect(Collectors.toList());
 
             // Elk woord / element omzetten naar lower en daarna opschonen wat betreft andere karaters als letters met een regex.
-            for (String woord : ruweWoordenArrayList){
+            for (String woord : ruweWoordenArrayList) {
                 String newValue = woord.toLowerCase(Locale.ROOT);
-                newValue = newValue.replaceAll("[^a-z]","");
+                newValue = newValue.replaceAll("[^a-z]", "");
                 ruweWoordenArrayList.set(ruweWoordenArrayList.indexOf(woord), newValue);
             }
             // Lege elementen verwijderen
@@ -55,13 +54,17 @@ public class WoordenTellerMain {
 
     }
 
-//    public static ArrayList<String> arrayListFilteren(ArrayList<String> arrayList ) {
-//        for (String woord : arrayList){
-//            if (verbodenWoorden.contains(woord)){
-//                arrayList.removeIf(woord);
-//            }
-//        }
-//    }
+    public static ArrayList<String> arrayListFilteren(ArrayList<String> arrayList) {
+        Iterator i = arrayList.iterator();      // Iterator maken over de gevoerde arraylist
+        String str = "";                        // Leeg string object maken
+        while (i.hasNext()) {                    // While loop maken tot iteratie is voltooid over de arraylist
+            str = (String) i.next();            // Str object vullen met de string waarde van i
+            if (verbodenWoorden.contains(str)) {
+                i.remove();                     // Wanneer string gelijk is aan string element verbodenwoorden dan verwijderen
+            }
+        }
+        return arrayList;                       // Schone arraylist teruggeven
+    }
 
 
 }

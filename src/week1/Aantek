@@ -15,10 +15,3 @@ UML:
 Compositie tussen klassen( composition ) -> Afhankelijkheid, teken je met dichte ruit
 Aggeregatie tussen klassen -> Lichtere afhankelijkheid, teken je met open ruit
 Patient -parent- -> Hart -child-
-
-
-// opschonen van de ruweWoordenArraylist:
-            for (String woord : ruweWoordenArrayList){
-                String newValue = woord.toLowerCase(Locale.ROOT);
-                ruweWoordenArrayList.set(woord.indexOf(woord), newValue);
-            }

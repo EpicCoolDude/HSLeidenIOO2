@@ -11,7 +11,7 @@
 exclude_van_git
 
 /out/
-out/
+./out/
 
 # Compiled class file
 *.class

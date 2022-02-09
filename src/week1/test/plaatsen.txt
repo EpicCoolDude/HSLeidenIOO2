@@ -1,0 +1,3 @@
+Haarlem 60000
+Alkmaar 45000
+Leiden 55000

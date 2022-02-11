@@ -18,6 +18,8 @@ public class LeesSteden {
                     .flatMap(Arrays::stream)
                     .collect(Collectors.toList());
 
+            //stedenArrayList.forEach(stad -> System.out.println(stad));
+
             // Elk woord / element omzetten naar string en elementen met cijfers verwijderen met regex.
             for (String stad : stedenArrayList) {
                 String newValue = stad;

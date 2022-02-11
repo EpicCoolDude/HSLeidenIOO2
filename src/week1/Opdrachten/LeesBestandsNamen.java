@@ -34,7 +34,7 @@ public class LeesBestandsNamen {
             }
     }
 
-    // korte Java8 nio methode met mooie foutmelding wanneer pad niet toegenkelijk is !
+    // korte Java8 nio methode met mooie foutmelding wanneer pad niet toegankelijk is !
     // bron: https://howtodoinjava.com/java8/java-8-list-all-files-example/
     public static Set listFilesUsingFilesList(String folder) {
         try {
@@ -49,7 +49,6 @@ public class LeesBestandsNamen {
                     "\n File size in bytes "+file.length()+
                     "\n\n"
             ));
-
         } catch (IOException e) {
             System.out.println("Error reading directory");
         }

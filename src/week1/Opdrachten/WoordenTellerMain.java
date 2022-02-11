@@ -37,7 +37,6 @@ public class WoordenTellerMain {
         // Sorteren ArrayList woorenGesorteerd wat betreft counter int achter woord van hoog naar laag
         Collections.sort(woordenGesorteerd, comparing(Woord::getTeller).reversed());
 
-
 //        // Array list printen om te testen
 //        for (int i = 0; i < woordenGesorteerd.size(); i++) { // dit werkt wel
 //            System.out.printf("%s : %d%n", woordenGesorteerd.get(i).getWoord(), woordenGesorteerd.get(i).getTeller());
@@ -47,7 +46,6 @@ public class WoordenTellerMain {
         arrayListToFile("/home/tim/Documents/IOO2/iooa-opdrachten_2020-2021/week_1/woorden_output.txt");
 
     }
-
 
     // Functie om alle woorden in een .txt file netjes in een ArrayList te zetten
     public static ArrayList<String> woordenFileToArraylist(String padNaarFile) {
@@ -74,7 +72,6 @@ public class WoordenTellerMain {
             ioe.printStackTrace();
         }
         return (ArrayList) Collections.emptyList();
-
     }
 
     //Functie om een ArrayList te schrijven naar een .txt file
@@ -106,11 +103,9 @@ public class WoordenTellerMain {
         while (i.hasNext()) {                    // While loop maken tot iteratie is voltooid over de arraylist
             str = (String) i.next();            // Str object vullen met de string waarde van i
             if (verbodenWoorden.contains(str)) {
-                i.remove();                     // Wanneer string gelijk is aan string element verbodenwoorden dan verwijderen
+                i.remove();                     // Wanneer string gelijk is aan string element verboden woorden dan verwijderen
             }
         }
         return arrayList;                       // Schone arraylist teruggeven
     }
-
-
 }

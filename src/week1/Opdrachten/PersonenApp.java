@@ -28,7 +28,6 @@ public class PersonenApp {
         }
 
         vindLettersEnPrint(personenlijst,"tKa"); // Letters opgeven en zoeken naar namen in de personenlijst
-
     }
         // Methode om namen van ArrayList te matchen op een aantal letters
         public static void vindLettersEnPrint(ArrayList<Persoon> personen, String letters){
@@ -38,6 +37,5 @@ public class PersonenApp {
             }
         }
     }
-
 }
 

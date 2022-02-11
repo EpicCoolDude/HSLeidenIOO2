@@ -29,5 +29,4 @@ public class Woord {
     public void verhoogTeller() {
         this.teller = teller + 1;
     }
-
 }

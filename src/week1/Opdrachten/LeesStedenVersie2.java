@@ -22,13 +22,13 @@ public class LeesStedenVersie2 {
 
                 String line = null;
 
-                // Lees bestandsnaam regel voor regel
+                // Lees bestands regel voor regel
                 while ((line = br.readLine()) != null) {
 
                     // Regel voor regel splitsen op spatie SPACE :
                     String[] parts = line.split(" ");
 
-                    // Eerste deel key is stadnaam, volgende deel is de omzet als String
+                    // Eerste deel key is stadnaam, volgende deel value is de omzet als String
                     String name = parts[0].trim();
                     String number = parts[1].trim();
 

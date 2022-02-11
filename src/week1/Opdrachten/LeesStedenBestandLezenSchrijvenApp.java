@@ -1,6 +1,6 @@
 package week1.Opdrachten;
 
-public class BestandLezenSchrijvenApp {
+public class LeesStedenBestandLezenSchrijvenApp {
 
     public static void main(String[] args) {
 

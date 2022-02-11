@@ -1,6 +1,7 @@
 package week1.Opdrachten;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -26,11 +27,13 @@ public class LeesSteden {
                 newValue = newValue.replaceAll("[^aA-zZ]", "");
                 stedenArrayList.set(stedenArrayList.indexOf(stad), newValue);
             }
-            // Lege elementen verwijderen
+            // Lege elementen verwijderen nav de regex opschoon actie
             stedenArrayList.removeIf(String::isBlank);
 
             // Hier elk overgebleven stad element printen naar de console
             stedenArrayList.forEach(stad -> System.out.println(stad));
+
+            ArrayList<Object> bla = new ArrayList<>();
 
         } catch (IOException ioe) {
             System.out.printf("\nKan %s niet vinden \n",bestandnaam);

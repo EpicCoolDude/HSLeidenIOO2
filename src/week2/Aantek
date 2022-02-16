@@ -1,0 +1,13 @@
+SOLID ( gouden regels voor ontwikkeling software )
+#SRP - Schoenmaker hou je bij je leest. Dus doe niks in een klasse waar je die klasse niet voor hebt bedoeld.
+       In geval van een auto heeft het auto-wassen niets met een auto te maken. De auto kan zichzelf ook niet wassen.
+       Voor wassen dus een aparte klasse maken.
+#OCP - Code in een klasse zo schrijven dat je de code eventuele later kunt her-gebruiken.
+       Denk aan een klasse om een bericht weergeven. Die klasse geeft dan een string terug.
+       Het mooie weergeven in een gui of als html laat je doen door een ander klasse.
+#LSP - Een parent klasse moet niet iets doen wat eigenlijk in een sub-klasse thuis hoort
+       In de hoofdklasse moet alleen code komen te staan die de sub-klasses gemeen hebben.
+       Of denk aan de vogel die niet kan vliegen
+
+ISP (Interface Segregation Principle)
+DIP (Dependency Inversion Principle)

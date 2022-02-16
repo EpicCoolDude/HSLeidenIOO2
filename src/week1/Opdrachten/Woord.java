@@ -3,7 +3,7 @@ package week1.Opdrachten;
 public class Woord {
 
     private String woord;
-    private int teller;
+    private int teller = 1;
 
     public Woord(String woord, int teller) {
         this.woord = woord;
@@ -11,7 +11,7 @@ public class Woord {
     }
 
     public String getWoord() {
-        return woord;
+        return this.woord;
     }
 
     public void setWoord(String woord) {
@@ -19,7 +19,7 @@ public class Woord {
     }
 
     public int getTeller() {
-        return teller;
+        return this.teller;
     }
 
     public void setTeller(int teller) {

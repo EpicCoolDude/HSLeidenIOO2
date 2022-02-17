@@ -1,4 +1,4 @@
-package week2.Opdrachten;
+package week2.Opdrachten.Figuren;
 
 public class Driehoek extends Figuur {
 

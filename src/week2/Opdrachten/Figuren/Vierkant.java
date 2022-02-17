@@ -1,4 +1,4 @@
-package week2.Opdrachten;
+package week2.Opdrachten.Figuren;
 
 public class Vierkant extends Figuur {
 
@@ -25,7 +25,6 @@ public class Vierkant extends Figuur {
     }
 
     public String toString(){
-
         return ("De zijden hebben elk een lengte van "+this.lengteZijde1+", die " +
                 "ervoor zorgen dat het vierkant een omtrek van "+ berekenOmtrek()+" heeft.");
     }

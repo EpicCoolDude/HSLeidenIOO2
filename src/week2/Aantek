@@ -11,3 +11,12 @@ SOLID ( gouden regels voor ontwikkeling software )
 
 ISP (Interface Segregation Principle)
 DIP (Dependency Inversion Principle)
+
+
+@Override
+Als je hoofdklasse (het object wat je extend) een functie heeft en je wil die functie ook hebben maar hij moet iets
+afwijken dan kan je @Override erin zetten en dan ben jij de baas over die functie.
+Bijvoorbeeld je wil de omtrek berekenen maar het gaat om een cirkel dan zijn het geen rechte lijnen meer en moet je
+met pi aan de gang dan doe je override op de functie in cirkel en maak je daar een specifieke berekening dan gebruikt
+hij die ipv de functie in de hoofdklasse.
+

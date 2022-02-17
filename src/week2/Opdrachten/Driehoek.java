@@ -61,10 +61,9 @@ public class Driehoek {
         return omtrek;
     }
 
-    public void toString(){
+    public String toString(){
         String deOmtrek = Double.toString(berekenOmtrek());
-        System.out.printf("De zijden hebben de lengtes %s,%s en %s, die ervoor zorgen" +
-                "dat de driehoek een omtrek van %s heeft",this.lengteZijde1,this.lengteZijde2,
-                this.lengteZijde3,deOmtrek);
+        return ("De zijden hebben de lengtes "+this.lengteZijde1+", "+this.lengteZijde2+ " en "+this.lengteZijde3+", die " +
+                "ervoor zorgen dat de driehoek een omtrek van "+ deOmtrek+" heeft");
     }
 }

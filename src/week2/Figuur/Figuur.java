@@ -16,5 +16,4 @@ public abstract class Figuur {
     public abstract String getVorm();
 
     public abstract void teken();
-
 }

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class AnimalFarm2 {
 
     public static void main(String[] args) {
-
         // nieuwe arraylist maken
         ArrayList<Animal> animalArrayList = new ArrayList<Animal>();
 

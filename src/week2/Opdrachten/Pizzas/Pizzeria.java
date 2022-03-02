@@ -14,9 +14,10 @@ public class Pizzeria {
         Collections.addAll(pizzas, tonno, bolognese, calzone, quattroStagionni, hawaii);
 
         BigPizza bigPizza = new BigPizza();
-
         pizzas.add(bigPizza);
-        System.out.println(tonno.getNaam());
-        System.out.println(tonno.getPrijs());
+
+        for (int i = 0; i < pizzas.size(); i++) {     //gewone loop
+            System.out.println((i + 1) + ". " + pizzas.get(i).getNaam() + ", "+pizzas.get(i).getPrijs());
+        }
     }
 }

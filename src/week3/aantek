@@ -1,0 +1,15 @@
+FlowPane
+
+GridPane
+http://tutorials.jenkov.com/javafx/gridpane.html
+
+Gird, Flow en Border layout
+
+Sequence diagram:
+objecten / klasse en functies
+
+<Objectnaam> : <Klassenaam>
+:Klassenaam
+:Remote
+:Dogdoor
+

@@ -1,6 +1,9 @@
 package week2.Opdrachten.Pizzas;
 
-public interface Pizza {
-
+public abstract class Pizza {
+    public abstract String getNaam();
+    public abstract double getPrijs();
+    public abstract void setPrijs(double prijs);
+    public abstract void setNaam(String naam);
 
 }

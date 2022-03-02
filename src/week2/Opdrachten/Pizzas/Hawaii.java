@@ -1,8 +1,8 @@
 package week2.Opdrachten.Pizzas;
 
-public class Bolognese extends Pizza implements Deliverable {
-    private double prijs = 7.00;
-    private String naam = "Bolognese";
+public class Hawaii extends Pizza implements Deliverable {
+    private double prijs = 12.75;
+    private String naam = "Hawaii";
     private String bezorgadres;
 
     @Override
@@ -27,12 +27,11 @@ public class Bolognese extends Pizza implements Deliverable {
 
     @Override
     public void setBezorgadres(String bezorgadres) {
-        this.bezorgadres = bezorgadres;
+
     }
 
     @Override
     public String getBezorgadres() {
-        return this.bezorgadres;
+        return null;
     }
-
 }
